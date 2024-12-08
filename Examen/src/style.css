@@ -1,0 +1,51 @@
+.navegacion-dias ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.navegacion-dias li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.filtro-dia {
+    padding: 8px 16px;
+    border: 2px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtro-dia:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.filtro-dia.activo {
+    background-color: #007bff;
+    color: white;
+}
+
+#tabla-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tabla-horarios th,
+#tabla-horarios td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+#tabla-horarios th {
+    background-color: #f4f4f4;
+}
+
+#tabla-horarios tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
