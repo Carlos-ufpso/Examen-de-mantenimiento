@@ -295,29 +295,62 @@ footer p {
     background-color: #f1c40f;
     transition: background-color 0.3s;
 }
-/*evento de mensaje*/
+/* Evitar desplazamiento horizontal en la página */
+html, body {
+    overflow-x: hidden;  /* Ocultar cualquier desplazamiento horizontal */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Estilos del mensaje emergente */
 #mensaje-emergente {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color:  #003366;
-    color: #fff;
-    padding: 20px 40px;
-    font-size: 2rem;
-    font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    visibility: hidden;
+    padding: 15px;
+    background-color: #007bff; /* Fondo azul */
+    color: white;
+    border-radius: 12px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente más grande */
+    width: 60%;    /* Menos ancho para hacerlo más estrecho */
+    max-width: 80%; /* Limita el ancho máximo */
+    height: auto;
+    max-height: 70%; /* Asegura que no ocupe más del 70% de la altura de la pantalla */
+    display: none;
     z-index: 1000;
-    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición fluida */
+    text-align: center;
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es largo */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más fuerte para un efecto elegante */
+    border: 2px solid #0056b3; /* Borde sutil para darle más definición */
 }
 
 #mensaje-emergente.activo {
+    display: block;
     opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.05); /* Efecto de escala al aparecer */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    #mensaje-emergente {
+        font-size: 16px; /* Tamaño de fuente más pequeño en dispositivos móviles */
+        padding: 12px;   /* Menos relleno en móviles */
+        width: 80%;      /* Ajusta el ancho para pantallas pequeñas */
+        max-height: 60%; /* Ajusta la altura a un 60% en móviles */
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #mensaje-emergente {
+        font-size: 14px; /* Ajuste aún mayor para pantallas muy pequeñas */
+        padding: 10px;   /* Relleno más pequeño */
+        width: 85%;      /* Asegura que el mensaje ocupe el máximo ancho posible */
+        max-height: 50%; /* Limita la altura en pantallas muy pequeñas */
+    }
 }
 /*agrego Daniel*/
 

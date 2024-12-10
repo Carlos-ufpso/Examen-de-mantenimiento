@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
 // 3. Doble clic para cambiar el color de fondo de la fila
 document.addEventListener('DOMContentLoaded', function () {
     const filas = document.querySelectorAll('#tabla-horarios tbody tr');
