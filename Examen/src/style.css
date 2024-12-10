@@ -49,6 +49,43 @@
 #tabla-horarios tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+/* Realizamos lo ajustes de manera especifica para que en la pantalla se muestre total el contenido */
+@media screen and (max-width: 375px) {
+    .navegacion-dias ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .navegacion-dias li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .filtro-dia {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #tabla-horarios {
+        font-size: 0.9rem;
+    }
+
+    #tabla-horarios th,
+    #tabla-horarios td {
+        padding: 8px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    form {
+        width: 90%; 
+    }
+}
 /* Stilo del css */
 body {
     font-family: Arial, sans-serif;
@@ -158,13 +195,14 @@ article ul li {
 }
 
 .navegacion-dias ul {
-    list-style: none;
+    list-style: column;
     display: flex;
     gap: 10px;
     padding: 0;
 }
 
 .navegacion-dias ul li button {
+    list-style: column;
     background-color: #004d99;
     color: white;
     border: none;
