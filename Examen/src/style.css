@@ -288,3 +288,35 @@ footer nav ul li a {
 footer p {
     margin: 5px 0;
 }
+
+
+/*agrego Daniel*/
+#tabla-horarios tbody tr.resaltado {
+    background-color: #f1c40f;
+    transition: background-color 0.3s;
+}
+/*evento de mensaje*/
+#mensaje-emergente {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:  #003366;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#mensaje-emergente.activo {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+/*agrego Daniel*/
