@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-//1
+
+// 1. Evento del mouse: Resaltar filas al pasar el cursor
 document.addEventListener('DOMContentLoaded', function () {
-    const pagina = document.getElementById('pagina');
     const filas = document.querySelectorAll('#tabla-horarios tbody tr');
-    // Evento del mouse: Resaltar filas al pasar el cursor
+
     filas.forEach(fila => {
         fila.addEventListener('mouseover', function () {
             this.classList.add('resaltado');
@@ -39,28 +39,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-//2
+
+// 2. Mostrar mensaje emergente al enviar formulario
 document.addEventListener('DOMContentLoaded', function () {
+    const formulario = document.querySelector('form');
     const mensajeEmergente = document.getElementById('mensaje-emergente');
 
-    // Evento de teclado: Mostrar animación emergente
-    document.addEventListener('keydown', function (event) {
-        if (event.key.toLowerCase() === 'b') {
-            mensajeEmergente.classList.add('activo');
+    formulario.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevenir el envío real del formulario (opcional)
 
-            // Eliminar el mensaje después de 2 segundos
-            setTimeout(() => {
-                mensajeEmergente.classList.remove('activo');
-            }, 2000);
-        }
+        // Mostrar animación emergente
+        mensajeEmergente.classList.add('activo');
+
+        // Eliminar el mensaje después de 2 segundos
+        setTimeout(() => {
+            mensajeEmergente.classList.remove('activo');
+        }, 2000);
     });
 });
 
-//3
+// 3. Doble clic para cambiar el color de fondo de la fila
 document.addEventListener('DOMContentLoaded', function () {
     const filas = document.querySelectorAll('#tabla-horarios tbody tr');
 
-    // Evento de doble clic para cambiar el color de fondo
     filas.forEach(fila => {
         fila.addEventListener('dblclick', function () {
             if (this.style.backgroundColor === 'lightblue') {
@@ -72,3 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', function() {
+        // Alternar la clase 'active' en #navLinks
+        navLinks.classList.toggle('active');
+    });
+});

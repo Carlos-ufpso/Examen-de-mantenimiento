@@ -320,3 +320,33 @@ footer p {
     transform: translate(-50%, -50%) scale(1.1);
 }
 /*agrego Daniel*/
+
+/* Estilo inicial para el menú, ocultando los enlaces de navegación */
+#navLinks {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+#navLinks li {
+    margin: 10px 0;
+}
+
+/* Estilo cuando el menú está visible */
+#navLinks.active {
+    display: block;
+}
+
+/* Opcional: estilo para el botón de menú */
+#menuToggle {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#menuToggle:hover {
+    background-color: #555;
+}
