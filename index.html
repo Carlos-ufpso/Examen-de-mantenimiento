@@ -1,66 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocaña BC</title>
+    <title>Club de Baloncesto</title>
     <link rel="stylesheet" href="Examen/src/style.css">
-<html lang="es">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
     <header>
-        <a href="#inicio" class="logo-link">
-            <img src= "Examen/src/Logo.png" alt="Logo Ocaña BC" width="60" height="60">
-        </a>
-        
-        <nav>
-            <button id="menuToggle">Menú</button>
-            <ul id="navLinks">
+        <nav class="navbar">
+            <figure class="logo">
+                <img src="Examen/src/Logo.png" alt="Logo Club de Baloncesto">
+            </figure>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#equipo">Nuestro Equipo</a></li>
                 <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#medallas">Medallas</a></li>
+                <li><a href="#requisitos">Requisitos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <body id="pagina"><!-- agrego Daniel-->
     <main>
-        <section id="inicio">
-            <h1>Ocaña BC</h1>
-            <img src="Examen/src/Equipo A y B mixto U-10 .png" alt="Equipo A y B mixto U-10 OCaña BC" width="600" height="400">
-            <p>Equipo de baloncesto comprometido con el desarrollo deportivo</p>
+        <section id="inicio" class="seccion">
+            <h1>Bienvenidos al Club de Baloncesto</h1>
+            <p>¡Únete a nuestra familia del baloncesto!</p>
         </section>
 
-        <section id="equipo">
-            <h2>Nuestros Equipos</h2>
-            <article>
-                <h3></h3>
-                <ul>
-                    <li>
-                        <img src="Examen/src/Equipo mixto U-12.png" alt="" width="200" height="200">
-                        <h4></h4>
-                        <p></p>
-                    </li>
-                    <li>
-                        <img src="" alt="" width="200" height="200">
-                        <h4>Carlos Eduardo Pérez</h4>
-                        <p>Entrenador Principal</p>
-                    </li>
-
-                    <li>
-                        <img src="" alt="" width="200" height="200">
-                        <h4>Carlos Jhosef Pérez</h4>
-                        <p>Entrenador Secundario</p>
-                    </li>
-                </ul>
-            </article>
-        </section>
-
-        <section id="horarios">
+        <section id="horarios" class="seccion">
             <h2>Horarios de Entrenamiento</h2>
-            
             <nav class="navegacion-dias">
                 <ul>
-                    <li><button class="filtro-dia" data-dia="todos">Todos</button></li>
+                    <li><button class="filtro-dia activo" data-dia="todos">Todos</button></li>
                     <li><button class="filtro-dia" data-dia="Lunes">Lunes</button></li>
                     <li><button class="filtro-dia" data-dia="Martes">Martes</button></li>
                     <li><button class="filtro-dia" data-dia="Miércoles">Miércoles</button></li>
@@ -68,7 +45,7 @@
                     <li><button class="filtro-dia" data-dia="Viernes">Viernes</button></li>
                 </ul>
             </nav>
-        
+
             <table id="tabla-horarios">
                 <thead>
                     <tr>
@@ -83,139 +60,200 @@
                         <td>Niños de 6 años a 17 años</td>
                         <td>Cancha 26 de julio</td>
                     </tr>
-
                     <tr data-dia="Lunes">
                         <td>14:00 - 15:00</td>
                         <td>Niños de 6 años a 17 años</td>
                         <td>Cancha 26 de julio</td>
                     </tr>
-        
                     <tr data-dia="Lunes">
                         <td>16:00 - 17:00</td>
                         <td>Niños de 6 años a 11 años</td>
                         <td>Cancha Torres del cable</td>
                     </tr>
-        
                     <tr data-dia="Lunes">
                         <td>17:00 - 18:00</td>
                         <td>Niños de 12 años a 17 años</td>
                         <td>Cancha Torres del cable</td>
                     </tr>
-        
                     <tr data-dia="Martes">
                         <td>15:30 - 16:30</td>
                         <td>Niños de 6 años a 11 años</td>
                         <td>Coliseo</td>
                     </tr>
-
                     <tr data-dia="Martes">
                         <td>16:30 - 18:00</td>
                         <td>Niños de 12 años a 17 años</td>
                         <td>Coliseo</td>
                     </tr>
-
                     <tr data-dia="Miércoles">
                         <td>8:00 - 9:00</td>
                         <td>Niños de 6 años a 17 años</td>
                         <td>Cancha 26 de julio</td>
                     </tr>
-
                     <tr data-dia="Miércoles">
                         <td>14:00 - 15:00</td>
                         <td>Niños de 6 años a 17 años</td>
                         <td>Cancha 26 de julio</td>
-
+                    </tr>
                     <tr data-dia="Jueves">
                         <td>15:30 - 16:30</td>
                         <td>Niños de 6 años a 11 años</td>
                         <td>Coliseo</td>
                     </tr>
-
                     <tr data-dia="Jueves">
                         <td>16:30 - 18:00</td>
                         <td>Niños de 12 años a 17 años</td>
                         <td>Coliseo</td>
                     </tr>
-
                     <tr data-dia="Viernes">
                         <td>8:00 - 9:00</td>
                         <td>Niños de 6 años a 17 años</td>
                         <td>Cancha 26 de julio</td>
                     </tr>
-
                     <tr data-dia="Viernes">
                         <td>14:00 - 15:00</td>
                         <td>Niños de 6 años a 17 años</td>
                         <td>Cancha 26 de julio</td>
                     </tr>
-
                     <tr data-dia="Viernes">
-                            <td>16:00 - 17:00</td>
-                            <td>Niños de 6 años a 11 años</td>
-                            <td>Cancha Torres del cable</td>
+                        <td>16:00 - 17:00</td>
+                        <td>Niños de 6 años a 11 años</td>
+                        <td>Cancha Torres del cable</td>
                     </tr>
-
                     <tr data-dia="Viernes">
-                            <td>17:00 - 18:00</td>
-                            <td>Niños de 12 años a 17 años</td>
-                            <td>Cancha Torres del cable</td>
+                        <td>17:00 - 18:00</td>
+                        <td>Niños de 12 años a 17 años</td>
+                        <td>Cancha Torres del cable</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section id="inscripcion">
-            <h2>Inscripciones Abiertas</h2>
-            <article>
-                <h3>Requisitos</h3>
+        <section id="equipo" class="seccion">
+            <h2>Nuestro Equipo</h2>
+            <article class="galeria-equipo">
+                <figure>
+                    <img src="Examen/src/Equipo mixto U-10 .png" alt="Equipo Principal">
+                    <figcaption>Equipo Principal</figcaption>
+                </figure>
+                <figure>
+                    <img src="Examen/src/Equipo mixto U-12.png" alt="Equipo Juvenil">
+                    <figcaption>Equipo Juvenil</figcaption>
+                </figure>
+                <figure>
+                    <img src="Examen/src/entrenador.png" alt="Equipo Infantil">
+                    <figcaption>Equipo Infantil</figcaption>
+                </figure>
+                <figure>
+                    <img src="Examen/src/entrenador_suplente.png" alt="Entrenadores">
+                    <figcaption>Entrenadores</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="medallas" class="seccion">
+            <h2>Nuestros Logros</h2>
+            <article class="galeria-medallas">
+                <figure>
+                    <img src="medalla1.jpg" alt="Medalla Campeonato Regional">
+                    <figcaption>Campeones Regionales 2023</figcaption>
+                </figure>
+                <figure>
+                    <img src="medalla2.jpg" alt="Medalla Campeonato Nacional">
+                    <figcaption>Subcampeones Nacionales 2022</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="requisitos" class="seccion">
+            <h2>Requisitos de Inscripción</h2>
+            <article class="lista-requisitos">
                 <ul>
-                    <li>Edad: 9-17 años</li>
-                    <li>Certificado médico</li>
-                    <li>Foto tipo carnet</li>
+                    <li>Edad: 6-17 años</li>
+                    <li>Certificado médico reciente</li>
+                    <li>2 fotos tamaño carnet</li>
+                    <li>Documento de identidad</li>
+                    <li>Autorización de los padres (menores de edad)</li>
+                    <li>Seguro médico vigente</li>
                 </ul>
             </article>
         </section>
 
-        <section id="contacto">
+        <section id="contacto" class="seccion">
             <h2>Contacto</h2>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <form id="contactForm">
+                <fieldset>
+                    <legend>Información personal</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
 
-                <label for="edad">Edad:</label>
-                <input type="number" id="edad" name="edad" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
 
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" required min="6" max="99">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" required>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" required></textarea>
 
-                <button type="submit">Enviar</button>
+                    <button type="submit">Enviar</button>
+                </fieldset>
             </form>
         </section>
     </main>
 
-    <footer>
-        <h2>Síguenos en redes sociales</h2>
-        <nav>
+    <footer class="footer-principal">
+        <section class="lugares-entrenamiento">
+            <h3>Lugares de Entrenamiento</h3>
+            <article class="ubicaciones">
+                <section class="ubicacion">
+                    <h4>Cancha 26 de julio</h4>
+                    <address>
+                        <p>Dirección: 23 Cra. 9ªOcaña, Norte de Santander</p>
+                    </address>
+                    <a href="https://maps.app.goo.gl/fj1iuMcxtDd5PVCj6" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+                </section>
+
+                <section class="ubicacion">
+                    <h4>Cancha Torres del cable</h4>
+                    <address>
+                        <p>Dirección: torres del cable, Ocaña, Norte de Santander</p>
+                    </address>
+                    <a href="https://maps.app.goo.gl/FhMDkFhHgXUSA6GT7" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+                </section>
+
+                <section class="ubicacion">
+                    <h4>Coliseo</h4>
+                    <address>
+                        <p>Dirección: Coliseo Cubierto "Argelino Durán Quintero"</p>
+                    </address>
+                    <a href="https://maps.app.goo.gl/mNRGUEo22NtvygmAA" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+                </section>
+            </article>
+        </section>
+
+        <section class="contacto-footer">
+            <h3>Contacto</h3>
+            <address>
+                <p>Teléfono: 316 367 5603</p>
+                <p>Telefono: 315 523 0533</p>
+            </address>
+        </section>
+
+        <nav class="redes-sociales-footer">
+            <h3>Síguenos en redes sociales</h3>
             <ul>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Twitter</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100083768090056&mibextid=ZbWKwL" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/ocaneros_bc?igsh=Mnp4ZGE2cnQ1YnFk" class="social-icon"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </nav>
-        <p>Ubicación: Cancha Torres del cable</p>
-        <p>Ubicación: Cancha 26 de julio</p>
-        <p>Ubicación: Coliseo</p>
-        <p>Teléfono: 316 367 5603</p>
-        <p>Teléfono: 315 523 0533</p>
-        <p>&copy; 2024 Ocaña BC</p>
+
+        <p class="copyright">© 2024 Club de Baloncesto. Todos los derechos reservados.</p>
     </footer>
-    <div id="mensaje-emergente">¡Viva el Baloncesto!</div>
+
     <script src="Examen/src/script.js"></script>
-</body><!-- agrego Daniel-->
+</body>
 </html>
