@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club de Baloncesto</title>
+    <title>Ocaña BC</title>
     <link rel="stylesheet" href="Examen/src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <figure class="logo">
-                <img src="Examen/src/Logo.png" alt="Logo Club de Baloncesto">
-            </figure>
-            <button class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#horarios">Horarios</a></li>
-                <li><a href="#equipo">Equipo</a></li>
-                <li><a href="#medallas">Medallas</a></li>
-                <li><a href="#requisitos">Requisitos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <span class="nav-brand">Ocaña BC</span>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+            
+            <ul class="nav-menu">
+                <button class="menu-btn"></button>
+                <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#horarios"><i class="fas fa-calendar-alt"></i> Horarios</a></li>
+                <li><a href="#equipo"><i class="fas fa-users"></i> Equipo</a></li>
+                <li><a href="#medallas"><i class="fas fa-medal"></i> Medallas</a></li>
+                <li><a href="#requisitos"><i class="fas fa-clipboard-check"></i> Requisitos</a></li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
         </nav>
     </header>
+    
+    
 
     <main>
-        <section id="inicio" class="seccion">
-            <h1>Bienvenidos al Club de Baloncesto</h1>
-            <p>¡Únete a nuestra familia del baloncesto!</p>
+        <section id="inicio" class="hero">
+            <figure class="profile-image">
+                <img src= "Examen/src/Logo.png" alt="Tu Nombre - Foto de perfil">
+            </figure>
+            <h1>Ocaña BC</h1>
+            <p class="frase">Dominando la cancha con pasión y espíritu de equipo. Un lugar donde cada drible, pase y enceste nos acerca más a la grandeza. Juntos, jugamos, soñamos y triunfamos</p>
         </section>
 
         <section id="horarios" class="seccion">
@@ -133,20 +141,20 @@
             <h2>Nuestro Equipo</h2>
             <article class="galeria-equipo">
                 <figure>
-                    <img src="Examen/src/Equipo mixto U-10 .png" alt="Equipo Principal">
-                    <figcaption>Equipo Principal</figcaption>
+                    <img src="Examen/src/Equipo mixto U-10 .png" alt="Equipo mixto U-10">
+                    <figcaption>Equipo mixto U-10</figcaption>
                 </figure>
                 <figure>
-                    <img src="Examen/src/Equipo mixto U-12.png" alt="Equipo Juvenil">
-                    <figcaption>Equipo Juvenil</figcaption>
+                    <img src="Examen/src/Equipo mixto U-12.png" alt="Equipo mixto U-12">
+                    <figcaption>Equipo mixto U-12</figcaption>
                 </figure>
                 <figure>
-                    <img src="Examen/src/entrenador.png" alt="Equipo Infantil">
-                    <figcaption>Equipo Infantil</figcaption>
+                    <img src="Examen/src/entrenador.png" alt="entrenador">
+                    <figcaption>entrenador</figcaption>
                 </figure>
                 <figure>
-                    <img src="Examen/src/entrenador_suplente.png" alt="Entrenadores">
-                    <figcaption>Entrenadores</figcaption>
+                    <img src="Examen/src/entrenador_suplente.png" alt="entrenador_suplente">
+                    <figcaption>entrenador suplente</figcaption>
                 </figure>
             </article>
         </section>
@@ -253,6 +261,7 @@
         <p class="copyright">© 2024 Club de Baloncesto Ocaña BC. Todos los derechos reservados.</p>
     </footer>
 
+    <div id="mensaje-emergente">¡Viva el Baloncesto!</div>
     <script src="Examen/src/script.js"></script>
 </body>
 </html>
