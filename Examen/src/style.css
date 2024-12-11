@@ -1,385 +1,261 @@
-.navegacion-dias ul {
-    list-style: none;
+* {
+    margin: 0;
     padding: 0;
-    margin: 20px 0;
-    text-align: center;
+    box-sizing: border-box;
 }
 
-.navegacion-dias li {
-    display: inline-block;
-    margin: 0 5px;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-.filtro-dia {
-    padding: 8px 16px;
-    border: 2px solid #007bff;
-    background-color: white;
-    color: #007bff;
-    border-radius: 4px;
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: #007bff;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.filtro-dia:hover {
-    background-color: #007bff;
-    color: white;
+.menu {
+    display: none;
+    list-style: none;
+    background: #007bff;
 }
 
-.filtro-dia.activo {
-    background-color: #007bff;
+.menu.active {
+    display: block;
+}
+
+.menu li a {
     color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+main {
+    margin-top: 60px;
+}
+
+.seccion {
+    padding: 2rem;
+    margin: 1rem 0;
 }
 
 #tabla-horarios {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 1rem;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 #tabla-horarios th,
 #tabla-horarios td {
-    padding: 12px;
+    padding: 1rem;
+    text-align: left;
     border: 1px solid #ddd;
 }
 
 #tabla-horarios th {
-    background-color: #f4f4f4;
+    background-color: #007bff;
+    color: white;
 }
 
 #tabla-horarios tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
 }
 
-/* Realizamos lo ajustes de manera especifica para que en la pantalla se muestre total el contenido */
-@media screen and (max-width: 375px) {
-    .navegacion-dias ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .navegacion-dias li {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .filtro-dia {
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    #tabla-horarios {
-        font-size: 0.9rem;
-    }
-
-    #tabla-horarios th,
-    #tabla-horarios td {
-        padding: 8px;
-    }
-
-    table {
-        font-size: 0.9rem;
-    }
-
-    form {
-        width: 90%; 
-    }
-}
-/* Stilo del css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-}
-
-header {
-    background-color: #004d99;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header .logo-link img {
-    border-radius: 50%;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-nav button {
-    background-color: white;
-    border: none;
-    color: #004d99;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-nav button:hover {
-    background-color: #e6e6e6;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-nav ul li a:hover {
-    background-color: #0059b3;
-    border-radius: 5px;
-}
-
-main {
-    padding: 20px;
-}
-
-main h1, main h2, main h3 {
-    color: #004d99;
-}
-
-section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-section#inicio img {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-article h4 {
-    color: #004d99;
-}
-
-article ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-article ul li {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    flex: 1;
-    max-width: 200px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+#tabla-horarios tr:hover {
+    background-color: #f1f1f1;
 }
 
 .navegacion-dias ul {
-    list-style: column;
     display: flex;
-    gap: 10px;
-    padding: 0;
-}
-
-.navegacion-dias ul li button {
-    list-style: column;
-    background-color: #004d99;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.navegacion-dias ul li button:hover {
-    background-color: #003366;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-table th {
-    background-color: #004d99;
-    color: white;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-table tr:hover {
-    background-color: #ddd;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-form input, form textarea, form button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    background-color: #004d99;
-    color: white;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #003366;
-}
-
-footer {
-    background-color: #004d99;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
     padding: 0;
 }
 
-footer nav ul li a {
+.filtro-dia {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #007bff;
     color: white;
-    text-decoration: none;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-
-/*agrego Daniel*/
-#tabla-horarios tbody tr.resaltado {
-    background-color: #f1c40f;
+    cursor: pointer;
+    border-radius: 4px;
     transition: background-color 0.3s;
 }
-/* Evitar desplazamiento horizontal en la página */
-html, body {
-    overflow-x: hidden;  /* Ocultar cualquier desplazamiento horizontal */
-    margin: 0;
-    padding: 0;
-    width: 100%;
+
+.filtro-dia.activo {
+    background: #0056b3;
 }
 
-/* Estilos del mensaje emergente */
-#mensaje-emergente {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px;
-    background-color: #007bff; /* Fondo azul */
-    color: white;
-    border-radius: 12px; /* Bordes redondeados */
-    font-size: 18px; /* Tamaño de fuente más grande */
-    width: 60%;    /* Menos ancho para hacerlo más estrecho */
-    max-width: 80%; /* Limita el ancho máximo */
-    height: auto;
-    max-height: 70%; /* Asegura que no ocupe más del 70% de la altura de la pantalla */
-    display: none;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición fluida */
+.filtro-dia:hover {
+    background: #0056b3;
+}
+
+.galeria-equipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.galeria-equipo figure {
     text-align: center;
-    overflow-y: auto; /* Permite el desplazamiento si el contenido es largo */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más fuerte para un efecto elegante */
-    border: 2px solid #0056b3; /* Borde sutil para darle más definición */
 }
 
-#mensaje-emergente.activo {
-    display: block;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.05); /* Efecto de escala al aparecer */
+.galeria-equipo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media screen and (max-width: 600px) {
-    #mensaje-emergente {
-        font-size: 16px; /* Tamaño de fuente más pequeño en dispositivos móviles */
-        padding: 12px;   /* Menos relleno en móviles */
-        width: 80%;      /* Ajusta el ancho para pantallas pequeñas */
-        max-height: 60%; /* Ajusta la altura a un 60% en móviles */
-    }
+.galeria-medallas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
-@media screen and (max-width: 375px) {
-    #mensaje-emergente {
-        font-size: 14px; /* Ajuste aún mayor para pantallas muy pequeñas */
-        padding: 10px;   /* Relleno más pequeño */
-        width: 85%;      /* Asegura que el mensaje ocupe el máximo ancho posible */
-        max-height: 50%; /* Limita la altura en pantallas muy pequeñas */
-    }
-}
-/*agrego Daniel*/
-
-/* Estilo inicial para el menú, ocultando los enlaces de navegación */
-#navLinks {
-    display: none;
-    list-style: none;
-    padding: 0;
+.galeria-medallas figure {
+    text-align: center;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 8px;
 }
 
-#navLinks li {
-    margin: 10px 0;
-}
-
-/* Estilo cuando el menú está visible */
-#navLinks.active {
-    display: block;
-}
-
-/* Opcional: estilo para el botón de menú */
-#menuToggle {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+fieldset {
     border: none;
-    cursor: pointer;
-    font-size: 16px;
+    padding: 1rem;
 }
 
-#menuToggle:hover {
-    background-color: #555;
+legend {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-principal {
+    background-color: #007bff;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.lugares-entrenamiento {
+    margin-bottom: 2rem;
+}
+
+.ubicaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.ubicacion {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.ubicacion h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.ubicacion address {
+    margin-bottom: 1rem;
+    font-style: normal;
+}
+
+.ubicacion a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+}
+
+.ubicacion a:hover {
+    color: #f1f1f1;
+    border-bottom-color: #f1f1f1;
+}
+
+.contacto-footer {
+    margin-bottom: 2rem;
+}
+
+.contacto-footer address {
+    font-style: normal;
+    margin-top: 1rem;
+}
+
+.redes-sociales-footer {
+    margin-bottom: 2rem;
+}
+
+.redes-sociales-footer ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.redes-sociales-footer .social-icon {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1280px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .ubicaciones {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
