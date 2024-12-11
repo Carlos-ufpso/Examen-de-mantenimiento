@@ -19,7 +19,7 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Distribuye espacio entre logo y menú */
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     background-color: #007bff;
@@ -47,7 +47,6 @@ header {
     display: block;
 }
 
-/* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
     .menu {
         display: none;

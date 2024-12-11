@@ -71,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
     filas.forEach(fila => {
         fila.addEventListener('dblclick', function () {
             if (this.style.backgroundColor === 'lightblue') {
-                this.style.backgroundColor = ''; // Restaurar el color original
+                this.style.backgroundColor = '';
             } else {
-                this.style.backgroundColor = 'lightblue'; // Resaltar en azul claro
+                this.style.backgroundColor = 'lightblue';
             }
         });
     });
@@ -82,12 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.querySelector('.nav-toggle');
     const menu = document.querySelector('.nav-menu');
 
-    // Al hacer clic en el botón del menú, alternar la clase 'active' en el menú
     menuBtn.addEventListener('click', () => {
         menu.classList.toggle('active');
     });
 
-    // Cerrar el menú cuando se hace clic en un enlace del menú
     const menuLinks = document.querySelectorAll('.nav-menu a');
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -95,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mostrar mensaje de bienvenida al cargar la página
     const mensajeEmergente = document.getElementById('mensaje-emergente');
     setTimeout(() => {
         mensajeEmergente.classList.add('visible');
@@ -105,11 +102,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 3500);
 
     document.addEventListener('keydown', function(event) {
-        // Verifica si la tecla presionada es la tecla "Tab"
         if (event.key === '+') {
-            event.preventDefault(); // Prevenir el comportamiento predeterminado de la tecla "Tab"
-            // Redirigir a la página deseada
-            window.location.href = 'https://www.friv.com/z/games/basketchamps/game.html'; // Reemplaza 'URL_DESEADO' con el enlace de la página a la que deseas redirigir
+            event.preventDefault();
+            window.location.href = 'https://www.friv.com/z/games/basketchamps/game.html'; 
         }
     });
 })
