@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Formulario enviado correctamente');
+            alert('Viva el baloncesto');
             contactForm.reset();
         });
     }
@@ -64,3 +64,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const filas = document.querySelectorAll('#tabla-horarios tbody tr');
+
+    filas.forEach(fila => {
+        fila.addEventListener('dblclick', function () {
+            if (this.style.backgroundColor === 'lightblue') {
+                this.style.backgroundColor = ''; // Restaurar el color original
+            } else {
+                this.style.backgroundColor = 'lightblue'; // Resaltar en azul claro
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+
+    // Al hacer clic en el botón del menú, alternar la clase 'active' en el menú
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    // Cerrar el menú cuando se hace clic en un enlace del menú
+    const menuLinks = document.querySelectorAll('.nav-menu a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    });
+
+    // Mostrar mensaje de bienvenida al cargar la página
+    const mensajeEmergente = document.getElementById('mensaje-emergente');
+    setTimeout(() => {
+        mensajeEmergente.classList.add('visible');
+    }, 500);
+    setTimeout(() => {
+        mensajeEmergente.classList.remove('visible');
+    }, 3500);
+
+    document.addEventListener('keydown', function(event) {
+        // Verifica si la tecla presionada es la tecla "Tab"
+        if (event.key === '+') {
+            event.preventDefault(); // Prevenir el comportamiento predeterminado de la tecla "Tab"
+            // Redirigir a la página deseada
+            window.location.href = 'https://www.friv.com/z/games/basketchamps/game.html'; // Reemplaza 'URL_DESEADO' con el enlace de la página a la que deseas redirigir
+        }
+    });
+})
