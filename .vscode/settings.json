@@ -3,5 +3,6 @@
         "Cancha",
         "Equipo",
         "Ocaña"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
